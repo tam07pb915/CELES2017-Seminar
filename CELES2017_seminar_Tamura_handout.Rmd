@@ -6,23 +6,7 @@ author: "CELES2017 英語教育実践セミナー1"
 output: word_document
 ---
 
-```{r setup,eval=F,include=F}
-knit_print.htmlwidget <- function (widget, ..., options = NULL)
-{
-	file <- basename(tempfile(fileext = ".html"))
-	selfcontained <- if(is.null(rmarkdown::metadata$self_contained)) TRUE else rmarkdown::metadata$self_contained
-	htmlwidgets::saveWidget(widget, file = file, selfcontained = selfcontained)
-	content <- if (selfcontained) {
-		on.exit(unlink(file), add = TRUE)
-		list(srcdoc = paste(readLines(file), collapse = "\n")) 
-	}
-	else {
-		list(src = file)
-	}
-	x <- htmltools::tag("iframe", content)
-	knitr::knit_print(x, options = options, ...)
-}
-```
+
 
 # 概要
 
@@ -147,9 +131,7 @@ knit_print.htmlwidget <- function (widget, ..., options = NULL)
 - スピーキングやライティングであれば文法的な正確さや流暢さなども評価はできるが，<span style ="color:blue;">行動志向的な評価</span>が基本
 - Pass or Failの<span style ="color:blue;">二値評価</span>が理想, but...
 - 文法的な誤りは全部無視するってこと？「出川イングリッシュ」でいいの？ -> It depends  
-[![IMAGE ALT TEXT HERE](8022bd9bae61bb74b75171cfbec9002f.png)](http://www.youtube.com/watch?v=GmTGAXCKXcU)
 
-   
   
 ## TBLTにおける言語的側面の評価
 - 「文法を評価に入れるかは評価の目的による（Long, 2015)
@@ -208,8 +190,7 @@ knit_print.htmlwidget <- function (widget, ..., options = NULL)
 
 ## タスクの出来をどのように評価したらいいだろう
 - みなさんは，この発話をどのように評価しますか？
-- 課題：次の絵の女性を見てください。絵を見ていない人にも状況が伝わるよう英語で説明してください（制限時間30 秒）<audio src="C:/Users/Yu/OneDrive/GitHub/CELES2017-seminar/speaking-sample.mp3" controls="controls"></audio>  
-![](EikenA-picture.png)
+- 課題：次の絵の女性を見てください。絵を見ていない人にも状況が伝わるよう英語で説明してください（制限時間30 秒）
 
 
 ## タスク・ベースのスピーキング評価規準の作成
@@ -223,8 +204,7 @@ knit_print.htmlwidget <- function (widget, ..., options = NULL)
 - 文法的正確さや流暢さなどは，それがタスク達成に必要である場合に評価の規準に含める
     
 ## 先ほどの発話をもう一度聞いてみましょう
-![](EikenA-picture.png)  
-<audio src="C:/Users/Yu/OneDrive/GitHub/CELES2017-seminar/speaking-sample.mp3" controls="controls"></audio>
+
 
 ## 評価例
 - The elevetor is full. （<span style ="color:blue;">○</span>エレベーターが混雑している）
